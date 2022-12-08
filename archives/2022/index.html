@@ -230,7 +230,7 @@ button {
 #l_cover {
   min-height: 64px;
 }
-.cover-wrapper {
+.cover-wrapper .cover {
   top: 0;
   left: 0;
   max-width: 100%;
@@ -257,17 +257,14 @@ button {
   align-items: center;
   align-self: center;
   align-content: center;
-  color: var(--color-site-inner);
-  padding: 0 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: -100px;
+  color: #fff;
+  padding: 16px;
 }
-.cover-wrapper .cover-bg {
+.cover-wrapper .cover .cover-body div.b {
+  margin-top: 3vh;
+  margin-bottom: 8vh;
+}
+.cover-wrapper .cover .cover-bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -276,12 +273,12 @@ button {
   -webkit-background-size: cover;
   -moz-background-size: cover;
 }
-.cover-wrapper .cover-bg.lazyload:not(.loaded) {
+.cover-wrapper .cover .cover-bg.lazyload:not(.loaded) {
   opacity: 0;
   -webkit-opacity: 0;
   -moz-opacity: 0;
 }
-.cover-wrapper .cover-bg.lazyload.loaded {
+.cover-wrapper .cover .cover-bg.lazyload.loaded {
   animation-delay: 0s;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -364,22 +361,22 @@ button {
     -moz-opacity: 1;
   }
 }
-.cover-wrapper .cover-body {
+.cover-wrapper .cover .cover-body {
   z-index: 1;
   position: relative;
   width: 100%;
   height: 100%;
 }
-.cover-wrapper#full {
+.cover-wrapper .cover#full {
   height: calc(100vh + 100px);
   padding-bottom: 100px;
 }
-.cover-wrapper#half {
+.cover-wrapper .cover#half {
   max-height: 640px;
   min-height: 400px;
   height: calc(36vh - 64px + 200px);
 }
-.cover-wrapper #scroll-down {
+.cover-wrapper .cover #scroll-down {
   width: 100%;
   height: 64px;
   position: absolute;
@@ -387,7 +384,7 @@ button {
   text-align: center;
   cursor: pointer;
 }
-.cover-wrapper #scroll-down .scroll-down-effects {
+.cover-wrapper .cover #scroll-down .scroll-down-effects {
   color: #fff;
   font-size: 24px;
   line-height: 64px;
@@ -2109,7 +2106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1670498215370),
+    lastupdate: new Date(1670498627821),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
